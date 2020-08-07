@@ -427,7 +427,7 @@ class OpenvpnMgmtInterface(object):
                 if version.major >= 2 and version.minor >= 4:
                     local_ipv6 = parts.popleft()
                     if local_ipv6:
-                        session['local_ip'] = ip_address(local_ipv6)
+                        session['local_ip6'] = ip_address(local_ipv6)
                 session['bytes_recv'] = int(parts.popleft())
                 session['bytes_sent'] = int(parts.popleft())
                 parts.popleft()
